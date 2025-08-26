@@ -1,0 +1,69 @@
+Database:
+ef codd
+data dictionary : meta data about the commamd name and definations it has
+Read about the ef codd rules to better undersanding for data base 
+in excel we have onesigle user updation is allowed other can only open in read only mode cant support 
+no scalable in excel ,Acess
+more scable in mqsql,rdbms(mostly centralised ,vertical database)
+most scable in mongodb,nosql(mostly distributed , horizontal database)
+
+only for 
+sys.tables === show tables 
+mdf:primary only one is allowed 
+ndf:secondary next all the other database is ndf
+ldf : Log file  (to discussed while transcations)
+are the excentention for the database
+
+
+atleast one mdf,and ldf to create database 
+
+diffrence between
+database: list of file mdf,ndf,ldf,
+dbms: software which manage database(oracel sequel server)
+sql:querry language
+
+
+what is instance in database
+instance is service which help to connect to database
+. is default server its name is "MSSQLServer"
+.is  current 
+./name 
+while connecting to the database we connect to instance of that database which inter connect to the instance
+
+ie MSSQLSERVER here we have one instance - has multiple database
+in oracle it had one to one instance per database 
+after 12 c we have multiple dataebaser per instance
+
+
+sql-> 
+
+->DDL:data defination language
+    Create,
+    Alter,
+    Drop
+
+->DML-Data Manipulation language
+
+    Insert
+    Update
+    Delete
+
+->TCL : Transaction Control language
+
+    Commit
+    Rollback
+    Savepoint
+
+
+
+System database	Description
+master Database	Records all the system-level information for an instance of SQL Server.
+
+msdb Database	Is used by SQL Server Agent for scheduling alerts and jobs.
+
+model Database	Is used as the template for all databases created on the instance of SQL Server. Modifications made to the model database, such as database size, collation, recovery model, and other database options, are applied to any databases created afterward.
+
+Resource Database	Is a read-only database that contains system objects that are included with SQL Server. System objects are physically persisted in the Resource database, but they logically appear in the sys schema of every database.
+    -> this store the data catalog or data dictionary
+
+tempdb Database: Is a workspace for holding temporary objects or intermediate result sets.
