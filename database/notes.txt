@@ -67,3 +67,90 @@ Resource Database	Is a read-only database that contains system objects that are 
     -> this store the data catalog or data dictionary
 
 tempdb Database: Is a workspace for holding temporary objects or intermediate result sets.
+
+==================================================
+DATABASE BASICS & TERMINOLOGY
+==================================================
+
+- **E.F. Codd**: Father of the relational database model.  
+  - *Tip*: Read about E.F. Codd's 12 rules for a better understanding of relational databases.
+
+- **Data Dictionary**: Metadata about the database, including command names and definitions.  
+  - *Definition*: A data dictionary stores information about the structure of the database (tables, columns, data types, etc.).
+
+- **Excel vs. Databases**:
+  - Excel: Only one user can update at a time; others are read-only. Not scalable.
+  - Access/MySQL/RDBMS: More scalable, centralized (vertical scaling).
+  - MongoDB/NoSQL: Most scalable, distributed (horizontal scaling).
+
+==================================================
+DATABASE FILES & EXTENSIONS
+==================================================
+
+- **sys.tables**: Shows all tables in the database (SQL Server).
+- **Database File Extensions**:
+  - **.mdf**: Primary data file (only one per database, mandatory).
+  - **.ndf**: Secondary data files (optional, can be multiple).
+  - **.ldf**: Log file (required for transactions and recovery).
+
+- *Note*: At least one .mdf and one .ldf are required to create a database.
+
+- **Difference between terms**:
+  - **Database**: Collection of files (.mdf, .ndf, .ldf).
+  - **DBMS**: Software that manages databases (e.g., Oracle, SQL Server).
+  - **SQL**: Structured Query Language, used to interact with databases.
+
+==================================================
+DATABASE INSTANCE
+==================================================
+
+- **Instance**: A service that allows connections to a database.
+  - The default SQL Server instance is named "MSSQLServer".
+  - "." refers to the current/default instance.
+  - "./name" can be used to specify a named instance.
+  - One instance can host multiple databases (in SQL Server).
+  - In Oracle (pre-12c): One instance per database.
+  - In Oracle (12c+): Multiple databases per instance.
+
+==================================================
+SQL LANGUAGE COMPONENTS
+==================================================
+
+- **DDL (Data Definition Language)**: Defines structure
+  - CREATE
+  - ALTER
+  - DROP
+
+- **DML (Data Manipulation Language)**: Manipulates data
+  - INSERT
+  - UPDATE
+  - DELETE
+
+- **TCL (Transaction Control Language)**: Manages transactions
+  - COMMIT
+  - ROLLBACK
+  - SAVEPOINT
+
+==================================================
+SYSTEM DATABASES IN SQL SERVER
+==================================================
+
+| Database         | Description                                                                                      |
+|------------------|--------------------------------------------------------------------------------------------------|
+| master           | Records all system-level information for an instance of SQL Server.                              |
+| msdb             | Used by SQL Server Agent for scheduling alerts and jobs.                                         |
+| model            | Template for all databases created on the instance. Changes here affect new databases.           |
+| Resource         | Read-only; contains system objects (data catalog/data dictionary) that appear in every database. |
+| tempdb           | Workspace for holding temporary objects or intermediate result sets.                             |
+
+==================================================
+QUICK TIPS
+==================================================
+
+- Use **sys.tables** to list all tables in SQL Server.
+- Always have at least one .mdf (primary) and one .ldf (log) file for a database.
+- Understand the difference between database, DBMS, and SQL.
+- Know the roles of system databases in SQL Server for administration and troubleshooting.
+- Review E.F. Codd's rules for relational database fundamentals.
+
+==================================================
