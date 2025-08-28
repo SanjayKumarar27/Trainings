@@ -1,0 +1,62 @@
+Programing
+Types of software
+1.System software
+2.Application software
+
+C language -Denis Riche
+C++ language -Bjarne Stroustrup
+
+C -> C++ -> java
+
+C++ + java -> C#
+
+microsoft ->C#
+
+extention -> C#(.cs)
+
+cpu can only access primary memory(ram, rom,cache)
+
+
+===================================================
+c/c++
+
+1.Source Code(.c/.cpp)
+2.After Compile (.obj) cconverstion of my code to Machine code (g++,gcc,trouboc)
+3.Linker (links the code with the libraries ) .exe
+4.Loader bring(load the exe to the ram called as process ) Process is container of threads
+5.Execution -> CPU(executes the thread the mandotory threed is called main thread this calls the main method in the Program )
+
+=======================================================================================
+Java
+
+1.Source Code (.java)
+2.Compiler (javac) -> byte code (.class)
+3.JIT compiler (.class byte code -> Native code(means Machine code based on the envirnoment as java is platfrom independent))
+4.
+
+=======================================================================================
+DotNet
+
+
+1.Source code (.cs)
+2.Compiler (csc)-> MSIL(microsoft intermediate language)(.exe/ .dll)
+JIT -> Native code(.Net has )
+
+...existing code...
+
+=======================================================================================
+Data Lake
+
+- A data lake is a centralized storage for raw data (structured, semi-structured, unstructured).
+- Access control in data lakes is important to secure sensitive data.
+- Access can be managed using identity services like Active Directory, role-based access control (RBAC), and permissions.
+- Only authorized users can access, modify, or analyze data in
+
+
+=======================================================================================
+MS Fabric (Microsoft Service Fabric)
+
+- A distributed systems platform by Microsoft.
+- Used to build, deploy, and manage scalable and reliable microservices and containers.
+- Provides features like health monitoring, load balancing, and automatic failover.
+- Supports cloud-native application development.
